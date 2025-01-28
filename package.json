@@ -1,20 +1,18 @@
 {
   "name": "blogging-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple blogging website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html",
+    "lint:html": "htmlhint src/*.html",
+    "lint:css": "stylelint styles/*.css",
+    "lint": "npm run lint:html && npm run lint:css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alizain102/Blogging-Website.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alizain102/Blogging-Website/issues"
-  },
-  "homepage": "https://github.com/alizain102/Blogging-Website#readme"
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "parcel": "^2.8.3",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0"
+  }
 }
